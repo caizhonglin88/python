@@ -67,3 +67,12 @@ with open("test2.txt",'w',encoding='utf-8') as f:
         tmp_data=data.split(',')
         f.write("%s的邮箱为%s" % (tuple(data.split(','))))
         f.flush()
+
+
+class Person():
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def like(self):
+        return "%s今年已经%d岁了，还是比较喜欢砍树！" % (self.name, self.age)
