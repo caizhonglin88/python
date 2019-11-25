@@ -58,3 +58,12 @@ print(lst) #在列表lst末尾一次性追加一个序列seq，返回[10, 11, 12
 # print(max(lst1))
 # print(min(lst1))  #查询列表lst1里面的最大和最小值，返回最大5，最小1，只能对数值做操作
 
+with open("test.txt",'r',encoding='utf-8') as f:
+    datas=f.readlines()
+    print(datas)
+
+with open("test2.txt",'w',encoding='utf-8') as f:
+    for data in datas[1:]:
+        tmp_data=data.split(',')
+        f.write("%s的邮箱为%s" % (tuple(data.split(','))))
+        f.flush()
